@@ -1,0 +1,125 @@
+<!DOCTYPE html>    
+<html>    
+<head>    
+    <title>Register Form</title>    
+    <style type="text/css">
+body
+{  
+    margin: 0;  
+    padding: 0;  
+    font-family: 'Arial';  
+}  
+.login{  
+        width: 382px;  
+        overflow: hidden;  
+        margin: auto;  
+        margin: 20 0 0 450px;  
+        padding: 80px;  
+        background: #000000;  
+        border-radius: 15px ;  
+}  
+h2{  
+    text-align: center;  
+    color: #000000;  
+    padding:10px;  
+}  
+label{  
+    color: white;  
+    font-size: 20px;  
+}  
+#uname{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;  
+}  
+#pass{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 3px;  
+    padding-left: 8px;   
+}  
+#log{  
+    width: 300px;  
+    height: 30px;  
+    border: none;  
+    border-radius: 17px;  
+    padding-left: 7px;  
+    color: blue;  
+}  
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color:#000000;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px 10px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color:#737373;
+}
+
+.active {
+  background-color:#737373;
+}
+</style>  
+<script type="text/javascript">
+         function validate(){
+         var un=document.f1.uname.value;
+         var pw=document.f1.pass1.value;
+         var pw2=document.f1.pass2.value;
+         if(un==null  || un==""){
+         alert('name cannt be blank');      
+         return false;
+         }
+         else if(pw.length <8){
+           alert('pawwsord should be 8 characters');       
+         return false;  
+        }
+         else if(pw==pw2){
+        	 return true;
+         }
+         else{
+        	 alert("password must be same");
+        	 return false;
+         }
+      }
+    </script>
+</head>    
+<body>    
+    <ul>
+  <li><a href="ep1.html">Home</a></li>
+  <li><a href="contactep.html">Contact</a></li>
+  <li><a href="aboutus.html">About</a></li>
+</ul>
+    <h2 style="background-color:#cccccc">Register Here</h2>
+    <form name="f1" method="post"  onsubmit="return validate()" action="userreg.jsp">
+    <div class="login">
+     <label>Username:<input type="text" name="uname" id="uname" value="" required="required"/></label>
+     <br/>
+     <label>Password:<input type="password" name="pass1" id="pass" value="" required="required"/></label>
+     </br>
+     <label>Cofirm Password:<input type="password" name="pass2" id="pass" value="" required="required"/></label>
+     <br/>
+     <label>Phone_number:<input type="text" name="phone" id="uname" value="" required="required"/></label>
+     <br/>
+     <input type="submit" value="Create"/>
+     <br><br>
+ </div>
+ </form>
+</body>    
+</html>  
